@@ -1,0 +1,384 @@
+/* Basic reset so there are no unwanted gaps */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fc;
+  color: #111827;
+}
+
+/* Splits the whole screen into Sidebar (left) and Main Content (right) */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh; /* Makes the layout fill the full screen height */
+}
+
+/* ================= SIDEBAR STYLES ================= */
+.sidebar {
+  width: 240px;
+  background-color: #1e1b4b; /* Dark navy-purple */
+  color: #ffffff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo and title at top of sidebar */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 30px 10px;
+}
+
+.sidebar-logo img {
+  width: 38px;
+  height: auto;
+}
+
+.sidebar-logo h2 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Removes bullet points from the menu list */
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 8px;
+}
+
+/* Styling for each menu link */
+.sidebar-menu a,
+.sidebar-logout a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Size for the small icons inside the sidebar */
+.sidebar-menu img,
+.sidebar-logout img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Active menu item ("Dashboard") with bright purple background */
+.sidebar-menu a.active {
+  background-color: #6d44db;
+  color: #ffffff;
+}
+
+.sidebar-menu a:hover,
+.sidebar-logout a:hover {
+  background-color: #312e81;
+  color: #ffffff;
+}
+
+/* Thin line above Logout */
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid #3730a3;
+  margin: 20px 10px;
+}
+
+/* ================= MAIN CONTENT AREA ================= */
+.main-content {
+  flex: 1; /* Takes up all remaining width on the right */
+  display: flex;
+  flex-direction: column;
+}
+/* ================= TOP HEADER BAR STYLES ================= */
+.topbar {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between; /* Pushes title left and profile right */
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Puts notification bell and profile side by side */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Notification bell container */
+.notification {
+  position: relative; /* Needed so the red dot stays on top of the bell */
+  cursor: pointer;
+}
+
+.notification img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Small red circle on the top-right corner of the bell */
+.red-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  background-color: #ef4444;
+  border-radius: 50%; /* Makes it a perfect circle */
+}
+
+/* User profile container */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; /* Makes the profile picture round */
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.arrow-down {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+/* Adds spacing around the main dashboard content below the topbar */
+.content-area {
+  padding: 28px 32px;
+}
+/*  WELCOME BANNER STYLES  */
+.welcome-banner {
+  background-color: #ede9fe; /* Soft light purple background */
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  justify-content: space-between; /* Pushes text left and image right */
+  align-items: center;
+  margin-bottom: 24px; /* Adds space below the banner for the next section */
+}
+
+.banner-text {
+  max-width: 520px;
+}
+
+.banner-text h2 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.banner-image img {
+  width: 360px;
+  height: auto;
+  display: block;
+}
+/*  4 STATS CARDS STYLES  */
+/* Puts all 4 cards in one horizontal row */
+.stats-grid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Common style for every stat card */
+.stat-card {
+  flex: 1; /* Makes all 4 cards equal width */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 14px;
+}
+
+/* Background colors for each of the 4 cards */
+.card-purple {
+  background-color: #ede9fe;
+}
+
+.card-green {
+  background-color: #dcfce7;
+}
+
+.card-yellow {
+  background-color: #fef3c7;
+}
+
+.card-pink {
+  background-color: #fee2e2;
+}
+
+/* Size for the icon inside each stat card */
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Big number (3, 12, 78%, 5) */
+.stat-info h3 {
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+/* Small label text under the number */
+.stat-info p {
+  font-size: 14px;
+  color: #4b5563;
+}
+/* ================= BOTTOM TWO BOXES STYLES ================= */
+/* Puts both white boxes side by side */
+.bottom-grid {
+  display: flex;
+  gap: 24px;
+}
+
+/* White box style for both "Your Courses" and "Upcoming Assignments" */
+.panel {
+  flex: 1; /* Makes both boxes equal width */
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.panel h3 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+/* Each row inside the white boxes */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f3f4f6; /* Light divider line between rows */
+}
+
+/* Removes the bottom line from the last item in each box */
+.list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Icon + Title/Subtitle grouped on the left */
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.course-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.doc-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.item-left h4 {
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.item-left p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Progress bar area on the right of each course */
+.course-progress {
+  width: 130px;
+  text-align: right;
+}
+
+.course-progress span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Light grey empty track of the progress bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+/* Purple filled part of the progress bar */
+.progress-fill {
+  height: 100%;
+  background-color: #6d44db;
+  border-radius: 10px;
+}
+
+/* Different widths for each course percentage */
+.w-80 {
+  width: 80%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+/* Light pink "Pending" tag on the right of each assignment */
+.badge-pending {
+  background-color: #fee2e2;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+}

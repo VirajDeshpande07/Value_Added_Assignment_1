@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Splits web page in left sidebar and right side content -->
+  <div class="dashboard-layout">
+
+    <!-- Sidebar on the left -->
+    <aside class="sidebar">
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <img src="17.png" alt="Portal Logo">
+        <h2>Student<br>Portal</h2>
+      </div>
+
+      <!-- Menu options -->
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#" class="active">
+            <img src="13.png" alt=""> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="12.png" alt=""> Assignments
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="11.png" alt=""> Courses
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="10.png" alt=""> Progress
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="09.png" alt=""> Profile
+          </a>
+        </li>
+      </ul>
+
+      <!-- Grey line under the profile button -->
+      <hr class="sidebar-divider">
+
+      <!-- Logout -->
+      <div class="sidebar-logout">
+        <a href="#">
+          <img src="08.png" alt=""> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Right side main content -->
+    <main class="main-content">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <!-- Left side Page Title -->
+        <h1 class="page-title">Dashboard</h1>
+
+        <!-- Right side Bell icon and User Profile -->
+        <div class="topbar-right">
+          <!-- Notification Bell -->
+          <div class="notification">
+            <img src="16.png" alt="Notifications">
+            <span class="red-dot"></span>
+          </div>
+
+          <!-- User Profile -->
+          <div class="user-profile">
+            <img src="15.png" alt="User Avatar" class="avatar">
+            <span class="user-name">Viraj</span>
+            <span class="arrow-down">&#9662;</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-area">
+        <!--WELCOME BANNER-->
+        <section class="welcome-banner">
+          
+          <!-- Left side welcome message -->
+          <div class="banner-text">
+            <h2>Welcome Back, Viraj! &#128075;</h2>
+            <p>Continue your learning journey and complete your <br> pending assignments.</p>
+          </div>
+
+          <!-- Right side image of banner -->
+          <div class="banner-image">
+           
+            <img src="18.png" alt="Study Illustration">
+          </div>
+
+        </section>
+        <!--4 STATS CARDS  -->
+        <section class="stats-grid">
+
+          <!-- Card 1: Courses -->
+          <div class="stat-card card-purple">
+            <img src="04.png" alt="Courses Icon" class="stat-icon">
+            <div class="stat-info">
+              <h3>3</h3>
+              <p>Courses</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Assignments -->
+          <div class="stat-card card-green">
+            <img src="03.png" alt="Assignments Icon" class="stat-icon">
+            <div class="stat-info">
+              <h3>12</h3>
+              <p>Assignments</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Progress -->
+          <div class="stat-card card-yellow">
+            <img src="02.png" alt="Progress Icon" class="stat-icon">
+            <div class="stat-info">
+              <h3>78%</h3>
+              <p>Progress</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Due This Week -->
+          <div class="stat-card card-pink">
+  
+            <img src="01.png" alt="Due This Week Icon" class="stat-icon">
+            <div class="stat-info">
+              <h3>5</h3>
+              <p>Due This Week</p>
+            </div>
+          </div>
+
+        </section>
+        <!-- 2 boxes of your courses and upcoming assignments -->
+        <section class="bottom-grid">
+
+          <!-- Left Box: Your Courses -->
+          <div class="panel">
+            <h3>Your Courses</h3>
+
+            <!-- Course 1 -->
+            <div class="list-item">
+              <div class="item-left">
+                <img src="07.png" alt="Web Development" class="course-icon">
+                <div>
+                  <h4>Web Development</h4>
+                  <p>HTML, CSS, Javascrpiti</p>
+                </div>
+              </div>
+              <div class="course-progress">
+                <span>80%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill w-80"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="list-item">
+              <div class="item-left">
+                <img src="06.png" alt="Python Programming" class="course-icon">
+                <div>
+                  <h4>Pytohn Programming</h4>
+                  <p>Basics to Advanced</p>
+                </div>
+              </div>
+              <div class="course-progress">
+                <span>70%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill w-70"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="list-item">
+              <div class="item-left">
+                <img src="05.png" alt="Database Systems" class="course-icon">
+                <div>
+                  <h4>Database Systems</h4>
+                  <p>SQL, Normalization, Queries</p>
+                </div>
+              </div>
+              <div class="course-progress">
+                <span>85%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill w-85"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Box: Upcoming Assignments -->
+          <div class="panel">
+            <h3>Upcoming Assignments</h3>
+
+            <!-- Assignment 1 -->
+            <div class="list-item">
+              <div class="item-left">
+                <!-- Add your document icon image name (e.g., 14.png) -->
+                <img src="14.png" alt="Document" class="doc-icon">
+                <div>
+                  <h4>Create a Responsive Landing Page</h4>
+                  <p>Due: 20 Nov 2026</p>
+                </div>
+              </div>
+              <span class="badge-pending">Pending</span>
+            </div>
+
+            <!-- Assignment 2 -->
+            <div class="list-item">
+              <div class="item-left">
+                <img src="14.png" alt="Document" class="doc-icon">
+                <div>
+                  <h4>Array Problem Set</h4>
+                  <p>Due: 22 Nov 2026</p>
+                </div>
+              </div>
+              <span class="badge-pending">Pending</span>
+            </div>
+
+            <!-- Assignment 3 -->
+            <div class="list-item">
+              <div class="item-left">
+                <img src="14.png" alt="Document" class="doc-icon">
+                <div>
+                  <h4>DBMS SQL Queries</h4>
+                  <p>Due: 25 Nov 2026</p>
+                </div>
+              </div>
+              <span class="badge-pending">Pendig</span>
+            </div>
+
+          </div>
+
+        </section>
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
